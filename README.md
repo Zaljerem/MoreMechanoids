@@ -1,9 +1,6 @@
 # MoreMechanoids
 Orion's RimWorld mod "MoreMechanoids".
 
-## Want to report bugs or suggest features?
-[Click here](https://github.com/OrionFive/Hospitality/issues/new/choose)
-
 
 ## License Bla Bla
 
