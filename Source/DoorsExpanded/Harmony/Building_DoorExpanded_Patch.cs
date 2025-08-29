@@ -1,31 +1,28 @@
-using System.Collections.Generic;
 using DoorsExpanded;
 using HarmonyLib;
+using MoreMechanoids;
+using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
-namespace MoreMechanoids;
-
-/// <summary>
-///     So HoldOpen can be disabled until the door is fixed
-/// </summary>
-internal static class Building_DoorExpanded_Patch
+[HarmonyPatch(typeof(Building_Door), nameof(Building_Door.GetGizmos))]
+public static class Building_Door_GetGizmos_Patch
 {
-    [HarmonyPatch(typeof(Building_DoorExpanded), nameof(Building_DoorExpanded.GetGizmos))]
-    public class GetGizmos
+    public static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> __result, Building_Door __instance)
     {
-        internal static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> __result, Building_DoorExpanded __instance)
+        foreach (var gizmo in __result)
         {
-            foreach (var gizmo in __result)
+            // Only modify if this is a Building_DoorExpanded
+            if (__instance is Building_DoorExpanded expandedDoor &&
+                gizmo is Command_Toggle t &&
+                t.defaultLabel == "CommandToggleDoorHoldOpen".Translate())
             {
-                if (gizmo is Command_Toggle t && t.defaultLabel == "CommandToggleDoorHoldOpen".Translate())
-                {
-                    var forcedOpen = __instance.IsForcedOpen();
-                    gizmo.disabled = forcedOpen;
-                    gizmo.disabledReason = forcedOpen ? "DisabledForcedOpen".Translate() : null;
-                }
-
-                yield return gizmo;
+                var forcedOpen = expandedDoor.IsForcedOpen();
+                t.Disabled = forcedOpen;
+                t.disabledReason = forcedOpen ? "DisabledForcedOpen".Translate() : null;
             }
+
+            yield return gizmo;
         }
     }
 }

@@ -1,15 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>More Mechanoids</name>
-  <author>Orion, JoeysLucky22, Erdelf</author>
-  <packageId>Orion.MoreMechanoids</packageId>
-  <url>http://steamcommunity.com/sharedfiles/filedetails/?id=846222458</url>
-  <supportedVersions>
-    <li>1.0</li>
-    <li>1.1</li>
-    <li>1.2</li>
-    <li>1.3</li>
-    <li>1.4</li>
+  <name>More Mechanoids (Continued)</name>
+  <author>Zaljerem</author>
+  <packageId>zal.moremechanoids</packageId>
+<modVersion IgnoreIfNoMatchingField="True">1.0.0</modVersion>
+  <supportedVersions>   
+    <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
   <modDependencies>
 	<li>
@@ -17,29 +14,67 @@
 		<displayName>Harmony</displayName>
 		<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 		<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-	</li>
-    <li>
-      <packageId>UnlimitedHugs.HugsLib</packageId>
-      <displayName>HugsLib</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
-    </li>
+	</li>   
   </modDependencies>
   <loadAfter>
-	<li>brrainz.harmony</li>
-    <li>UnlimitedHugs.HugsLib</li>
+	<li>brrainz.harmony</li>  
     <li>spino.sandy.mechanoidsextra</li>
     <li>jecrell.doorsexpanded</li>
     <li>limetreesnake.furnishing</li>
   </loadAfter>
   <incompatibleWith>
   </incompatibleWith>
-  <description>A new mechanical threat has risen! 
+  <description>
+Original mod by Orion, JoeysLucky22, Erdelf
+http://steamcommunity.com/sharedfiles/filedetails/?id=846222458
+GNU General Public License 3
 
-	Features:
-	- Crawler
-	- Skullywag
-	- Flamebot
-	- Mammoth
-	- Assaulter
-  </description>
+Github:
+https://github.com/Zaljerem/MoreMechanoids
+
+--
+
+Removed Hugslib requirement.
+
+--
+
+Original mod notes (1.4):
+
+Adds 5 new vanilla style Mechanoid types.
+
+A mechanical threat has risen!
+Are you tired of shooting Scythers and Centipedes? This mod extends the Mechanoid arsenal for more variation and new challenges!
+
+Featuring 5 new menacing unit types:
+- Crawler
+- Skullywag
+- Flamebot
+- Mammoth
+- Assaulter
+
+Is this for you?
+- If you're looking for an endgame challenge against the Mechanoids, this mod is for you. The new unit types will keep you on your toes.
+- If you find Scythers and Centipedes annoyingly hard to defeat, this mod is for you as well. Some of the units are much easier to kill and more satisfying opponents.
+
+Requirements
+This mod can be added to existing save games.
+
+Recommended mods to combine with
+- What The Hack!? (Continued): Allows you to hack mechanoids and have them work for you
+
+Incompatible mods [untested in 1.5/1.6]
+- Yayo's Combat 3: Makes some mechanoids hard to kill (you need decent armor penetration). Disable "Use Advanced Armor Algorithms" from the mod options if you find it too hard.
+- What The Hack?!: Skullywags from mech clusters immediately awake and trigger the cluster
+- All door mods have to be loaded before More Mechanoids (can't hold doors open otherwise)
+
+Credits
+- Mechanoid graphics by JoeysLucky
+- A12 to A17 update by Erdelf
+- Korean Translation by NyaamZ
+- French Translation by Scribio[discord.gg]
+- 1.4 update by mlie
+
+History
+More Mechanoids existed before, from A8 to A12, when I discarded it in favour of my Hospitality mod. Together with Erdelf I have now stripped it down to its core and made the new unit types available again.
+</description>
 </ModMetaData>

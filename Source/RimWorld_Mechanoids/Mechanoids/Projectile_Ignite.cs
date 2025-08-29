@@ -19,7 +19,7 @@ public class Projectile_Ignite : Projectile
 
     public override void Impact(Thing hitThing, bool blockedByShield = false)
     {
-        hitThing?.TryAttachFire(1);
+        hitThing?.TryAttachFire(1, null);
         Ignite();
     }
 
@@ -50,7 +50,7 @@ public class Projectile_Ignite : Projectile
             var fireSize = radius - vec3.DistanceTo(Position);
             if (fireSize > 0.1f)
             {
-                FireUtility.TryStartFireIn(vec3, map, fireSize);
+                FireUtility.TryStartFireIn(vec3, map, fireSize, null);
             }
         }
     }

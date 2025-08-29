@@ -29,6 +29,7 @@ public static class GenericUtility
 
     public static bool ValidSkullywagTargetPawn(Pawn pawn)
     {
-        return pawn is { Destroyed: false, Downed: false } && !pawn.IsInvisible() && pawn.def.race is { IsFlesh: true };
+        //return pawn is { Destroyed: false, Downed: false } && !pawn.IsInvisible() && pawn.def.race is { IsFlesh: true };
+        return pawn is { Destroyed: false, Downed: false } && pawn.def.race is { IsFlesh: true };
     }
 }

@@ -1,33 +1,26 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputPath>..\..\DoorsExpanded\1.4\Assemblies</OutputPath>
+    <AssemblyName>MoreMechanoidsDoorsExpanded</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <TargetFramework>net48</TargetFramework>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <DebugType>None</DebugType>
-    <LangVersion>latest</LangVersion>
-    <FileVersion>1.4.1</FileVersion>
   </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>   
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*-*" />
+    <PackageReference Include="Lib.Harmony" Version="2.4.1" />	
+  </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>*</Version>
-      <ExcludeAssets>runtime</ExcludeAssets>
-      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Lib.Harmony">
-      <Version>*</Version>
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
-    <ProjectReference Include="..\RimWorld_Mechanoids\MoreMechanoids.csproj">
-	    <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
-	    <CopyLocal>False</CopyLocal>
-	    <Private>false</Private>
-	    <ExcludeAssets>all</ExcludeAssets>
-    </ProjectReference>
-	  <Reference Include="DoorsExpanded">
-		  <HintPath>..\..\..\..\..\..\workshop\content\294100\1316188771\1.4\Assemblies\DoorsExpanded.dll</HintPath>
-		  <CopyLocal>False</CopyLocal>
-		  <Private>false</Private>
-	  </Reference>
+    <Reference Include="DoorsExpanded">
+      <HintPath>..\DoorsExpanded.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MoreMechanoids">
+      <HintPath>..\RimWorld_Mechanoids\bin\Release\net48\MoreMechanoids.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
 </Project>

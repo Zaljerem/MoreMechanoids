@@ -39,7 +39,7 @@ public class CompEmpShield : CompShield
         Graphics.DrawMesh(MeshPool.plane10, matrix, bubbleMat, 0);
     }
 
-    public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
+    public override void PostPreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
     {
         absorbed = false;
         if (ShieldState != 0)

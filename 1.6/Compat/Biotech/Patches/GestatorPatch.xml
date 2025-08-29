@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "ResurrectLightMech"]/fixedIngredientFilter/thingDefs</xpath>
+					  <value>
+						<li>Corpse_Mech_Crawler</li>
+						<li>Corpse_Mech_Flamebot</li>
+					  </value>
+				  </Operation>
+
+			      <Operation Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+					  <value>
+						<li>Corpse_Mech_Skullywag</li>
+						<li>Corpse_Mech_Assaulter</li>
+					  </value>
+				  </Operation>
+
+			      <Operation Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+					  <value>
+						<li>Corpse_Mech_Mammoth</li>
+					  </value>
+				  </Operation>
+
+			      <Operation Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MechGestator"]/recipes</xpath>
+					  <value>
+						<li>Mech_Crawler</li>
+						<li>Mech_Flamebot</li>
+					  </value>
+				  </Operation>
+			      <Operation Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "LargeMechGestator"]/recipes</xpath>
+					  <value>
+						<li>Mech_Skullywag</li>
+						<li>Mech_Assaulter</li>
+						<li>Mech_Mammoth</li>
+					  </value>
+				  </Operation>
+
+
+</Patch>
